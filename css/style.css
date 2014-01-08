@@ -7,13 +7,26 @@ body {
 
 #team-members .member {
   float: left;
-  /*border: 1px solid gray;*/
+  border: 1px solid gray;
   margin: 10px;
-  padding: 6px; }
+  padding: 6px;
+  border-radius: 20px; }
+  #team-members .member img {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted blue;
+    border-radius: 15px; }
+  #team-members .member img.first {
+    display: block; }
+  #team-members .member img.second {
+    display: none; }
 
-#team-members .member img {
-  width: 200px;
-  height: 200px; }
+#team-members .member:hover:nth-child(odd) img.first {
+  transition: -webkit-transform 10s;
+  -webkit-transform: rotate(30deg); }
+#team-members .member:hover:nth-child(odd) img.second {
+  display: none; }
 
 #team-members .member div.name {
-  text-align: center; }
+  text-align: center;
+  font-size: .5em; }
